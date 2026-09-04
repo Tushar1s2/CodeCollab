@@ -1,6 +1,5 @@
 import { Landing, Layout, Signup,SetupPassword } from "./Components/index"
-import { Outlet } from "react-router-dom"
-import { Routes, Route, createBrowserRouter } from "react-router-dom"
+import { Routes, Route} from "react-router-dom"
 import Dashboard from "./Components/Main/Dashboard"
 
 

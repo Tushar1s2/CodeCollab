@@ -1,8 +1,6 @@
-import React from 'react'
-import { useState } from 'react'
+
 import { Link } from "react-router-dom"
 function Landing() {
-    const [loading,setLoading]=useState(false);
     return (
         <div className='bg-[#08090D] min-h-screen text-[#F5F5F5]'>
             <div className='h-[50px] flex justify-between mx-6 items-center border-b border-[#262936]'>
