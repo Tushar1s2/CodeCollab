@@ -1,6 +1,6 @@
-import { Landing, Layout, Signup,SetupPassword } from "./Components/index"
+import { Landing, Layout, Signup,SetupPassword,Dashboard } from "./Components/index"
 import { Routes, Route} from "react-router-dom"
-import Dashboard from "./Components/Main/Dashboard"
+
 
 
 function App() {

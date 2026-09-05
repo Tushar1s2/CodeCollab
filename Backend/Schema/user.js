@@ -36,8 +36,23 @@ const userSchema = new Schema({
     lastLogin: {
         type: Date,
         required: true
+    },
+    role:{
+        type:String
+    },
+    bio:{
+        type:String
+    },
+    location:{
+        type:String
+    },
+    joinedAt:{
+        type:Date,
+    },
+    skills:{
+        type:[String]
     }
-});
+}); 
 
 userSchema.index(
     { provider: 1, providerId: 1 },
