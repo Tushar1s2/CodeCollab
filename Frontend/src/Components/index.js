@@ -3,8 +3,11 @@ import Landing from "./Landing/Landing";
 import Signup from "./Authentication/Signup";
 import SetupPassword from "./Authentication/SetupPassword";
 import Dashboard from "./Main/Dashboard/Dashboard";
-import Header from "./Main/Dashboard/Header/Header";
+import Header from "./Main/Header/Header";
+import image from "../assests/dev.png"
+import Sidebar from "./Main/Sidebar/Sidebar";
+import Profile from "./Main/Profile/Profile";
 
-export {Layout,Landing,Signup,SetupPassword,Dashboard,Header};
+export {Layout,Landing,Signup,SetupPassword,Dashboard,Header,image,Sidebar,Profile};
 
 
