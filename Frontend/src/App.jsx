@@ -1,4 +1,4 @@
-import { Landing, Layout, Signup,SetupPassword,Dashboard, Profile } from "./Components/index"
+import { Landing, Layout, Signup,SetupPassword,Dashboard, Profile, Friends } from "./Components/index"
 import { Routes, Route} from "react-router-dom"
 
 
@@ -14,6 +14,7 @@ function App() {
           <Route path="setup-password" element={<SetupPassword/>} />
           <Route path="dashboard"element={<Dashboard/>}/>
           <Route path="profile" element={<Profile/>}/>
+          <Route path="friends" element={<Friends/>}/>
         </Route>
       </Routes>
     </div>

@@ -1,6 +1,35 @@
-import { Header, Sidebar,image} from "../../index";
-function Dashboard() {
+import { useEffect } from "react";
+import { Header, Sidebar, image } from "../../index";
+import { useDispatch, useSelector } from "react-redux";
+import { setUser } from "../../../store/userSlice";
 
+function Dashboard() {
+  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const getDashboard = async () => {
+      try {
+        console.log("HIT");
+        const res = await fetch("http://localhost:8080/dashboard", {
+          method: "GET",
+          credentials: "include"
+        });
+        console.log("Hit2");
+        const data = await res.json();
+        console.log("Hit3");
+        dispatch(setUser(data.user));
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    getDashboard();
+  }, [dispatch])
+  console.log(user);
+
+  if (!user) {
+    return <div><h1>Loading...</h1></div>;
+  }
 
   return (
     <div className="min-h-screen w-full bg-[#08090D] text-[#F5F5F5]">
@@ -17,7 +46,7 @@ function Dashboard() {
             {/* Left Content */}
             <div>
               <h1 className="text-2xl font-semibold">
-                Welcome back, Tushar! 👋
+                Welcome back,{user?.name}! 👋
               </h1>
 
               <p className="mt-2 text-sm text-gray-400">
